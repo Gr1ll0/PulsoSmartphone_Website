@@ -1,0 +1,30 @@
+.smartphone {
+    position: relative;
+    width: 220px;
+    height: 520px;
+  }
+  
+  #imagen-celular {
+    width: 100%;
+    height: auto;
+  }
+  
+  .area-resaltada-pantalla {
+    background-color: blue;
+    opacity: 0.5;
+    position: absolute;
+    top: 66px;
+    left: 15px;
+    width: 188px;
+    height: 327px;
+  }
+  
+  
+  
+  #formulario {
+    margin-top: 20px;
+  }
+  
+  .area-SinResaltar-pantalla{
+    cursor: pointer;
+  }

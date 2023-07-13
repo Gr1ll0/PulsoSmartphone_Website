@@ -7676,6 +7676,15 @@ textarea.form-control-lg {
   text-align: center !important;
 }
 
+.text-center-objetivos {
+  margin-top: 2.4rem;
+  text-align: center !important;
+}
+
+.text-center-objetivos p {
+  margin-bottom: 3.5rem;
+}
+
 .text-decoration-none {
   text-decoration: none !important;
 }
@@ -11362,7 +11371,7 @@ p {
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1.16rem;
+  font-size: 1.12rem; /*Tamaño de fuente*/
   color: black;
   letter-spacing: 0.0625em;
 }
@@ -11715,6 +11724,21 @@ header.masthead .masthead-heading {
 
 .img-brand {
   height: 2.75rem;
+}
+
+.objetivos {
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.objetivos img {
+  width: 14rem;
+  height: 14rem;
+  border: 0.5rem solid rgba(33, 150, 243, 0.68);
+}
+.objetivos h4, .objetivos .h4 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
 }
 
 section#contact {
