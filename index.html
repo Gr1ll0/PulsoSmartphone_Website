@@ -310,7 +310,7 @@
                 <h2 class="section-heading text-uppercase">Contactanos</h2>
                 <h3 class="section-subheading text-muted">Estamos esperando tu mensaje</h3>
             </div>
-            <form id="contactForm">
+            <form id="contactForm" action="https://formspree.io/f/mknlgobw" method="POST">
                 <div class="row align-items-stretch mb-5">
                     <div class="col-md-6">
                         <div class="form-group">
@@ -324,10 +324,15 @@
                                 name="email" required />
                             <div class="invalid-feedback" id="emailFeedback">El email es obligatorio</div>
                         </div>
-                        <div class="form-group mb-md-0">
+                        <div class="form-group">
                             <!-- Phone number input-->
                             <input class="form-control" id="phone" type="tel" placeholder="Telefono celular *" name="phone" required />
                             <div class="invalid-feedback" id="phoneFeedback">El número celular es obligatorio</div>
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <!-- Subject number input-->
+                            <input class="form-control" id="subject" type="text" placeholder="Asunto *" name="subject" required />
+                            <div class="invalid-feedback" id="subjectFeedback">El asunto es obligatorio</div>
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -2,25 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style-presupuesto.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen Interactiva con Fabric.js</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+  <link rel="stylesheet" href="css/style-presupuesto.css">
 </head>
 
 <body>
-    <div class="smartphone">
-        <img src="assets/img/celular.png" alt="Celular" usemap="#mapa-celular" id="imagen-celular">
-        <map name="mapa-celular" id="mapa-celular">
-            <area class="area-SinResaltar-pantalla"shape="rect" coords="16,66,203,393" alt="Pantalla" data-part="Pantalla" onclick="resaltarParte(event)">
-            <!-- Agrega más áreas según las partes del celular que deseas destacar -->
-        </map>
-    </div>
+  <canvas id="canvas" width="191" height="400"></canvas>
 
-    <form id="formulario">
-        <input type="text" id="parte-rota" name="parte-rota" readonly>
-    </form>
-    <script src="js/presupuesto.js"></script>
+  <form id="formulario">
+    <label for="nombreParte">Nombre de la parte:</label>
+    <input type="text" id="nombreParte" readonly>
+  </form>
 </body>
+
+<script src="js/presupuesto.js"></script>
 
 </html>

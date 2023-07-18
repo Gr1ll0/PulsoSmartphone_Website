@@ -14,66 +14,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+const form = document.getElementById('contactForm')
 
-$(document).ready(function () {
-    // Validar campos antes de enviar el formulario
-    $('#submitButton').click(function (event) {
-        event.preventDefault(); // Evitar la acción predeterminada de envío del formulario
+async function handleSendEmail(event){
+    event.preventDefault()
 
-        // Validar campos
-        var validForm = true;
+    const fd = new FormData(this)
 
-        $('#contactForm input, #contactForm textarea').each(function () {
-            if (!$(this).val()) {
-                $(this).addClass('is-invalid');
-                validForm = false;
-            } else {
-                $(this).removeClass('is-invalid');
-            }
-        });
-
-        if (!validForm) {
-            return;
+    const response = await fetch('https://formspree.io/f/mknlgobw', {
+        method: 'POST',
+        body: fd,
+        headers:{
+            Accept: 'application/json'
         }
+    })
 
-        // Validar formato de correo electrónico
-        var email = $('#email').val();
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(response.ok){
+        this.reset()
+        alert('Mensaje enviado')
+    } else{
+        alert('Error al enviar el mensaje')
+    }
 
-        if (!emailRegex.test(email)) {
-            $('#email').addClass('is-invalid');
-            validForm = false;
-            return;
-        }
 
-        if (!validForm) {
-            return;
-        }
+}
 
-        // Enviar formulario con AJAX
-        $.ajax({
-            url: 'URL_DE_TU_API',
-            type: 'POST',
-            dataType: 'json',
-            data: $('#contactForm').serialize(),
-            success: function (response) {
-                // Mostrar mensaje de éxito
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Mensaje enviado con exito',
-                    text: 'Su mensaje se envio con exito, y sera respondido lo más rapido posible'
-                }).then(function () {
-                    // Redirigir o realizar otra acción después del éxito
-                });
-            },
-            error: function (xhr, status, error) {
-                // Mostrar mensaje de error
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Error al enviar el mensaje',
-                    text: 'Si este error persiste pongase en contacto con un administrador de la página'
-                });
-            }
-        });
-    });
-});
+form.addEventListener('submit', handleSendEmail)

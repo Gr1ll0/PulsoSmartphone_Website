@@ -28,3 +28,17 @@
   .area-SinResaltar-pantalla{
     cursor: pointer;
   }
+
+  canvas {
+    border: 1px solid #ccc;
+  }
+  
+  /* Estilos para ocultar los manipuladores de control */
+  .custom-control-handler {
+    display: none !important;
+  }
+  
+  /* Estilos para ocultar el indicador de rotación */
+  .custom-rotation-icon {
+    display: none !important;
+  }
