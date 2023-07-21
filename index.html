@@ -7,7 +7,7 @@
     <meta name="author" content="Alex Abrahamian" />
     <title>Puslo Smartphone</title>
     <!-- Favicon-->
-    <link rel="icon" type="image/x-icon" href="assets/icono.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/logo-propio.ico" />
     <!-- Puslo Smartphone -->
     <script src="https://kit.fontawesome.com/97a6d63383.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -24,20 +24,19 @@
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="assets\img\logo.jpg" alt="..." /></a>
+            <a class="navbar-brand" href="#page-top"><img src="assets/img/logo-propio.png" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
                 <i class="fas fa-bars ms-1"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Fallas Frecuentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Fallas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#compania">Compañía</a></li>
                     <li class="nav-item"><a class="nav-link" href="#local">Local</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -136,7 +135,8 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                            <img class="img-fluid img-falla" src="assets/img/fallas/celular-fallas-pantalla-manchas.png"
+                                alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Manchas o líneas en la pantalla</div>
@@ -152,7 +152,8 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                            <img class="img-fluid img-falla" src="assets/img/fallas/bajabateria-celular.png"
+                                alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Poca duración de la batería</div>
@@ -168,7 +169,7 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                            <img class="img-fluid img-falla" src="assets/img/fallas/tabradoenlogo-celular.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Al encender se queda en el logo</div>
@@ -184,7 +185,7 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                            <img class="img-fluid img-falla" src="assets/img/fallas/malware-celular.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">El software puede tener un virus</div>
@@ -200,7 +201,7 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                            <img class="img-fluid img-falla" id="falla-cargalenta" src="assets/img/fallas/cargalenta-celular.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">El celular no carga, o carga muy lento</div>
@@ -216,7 +217,7 @@
                             <div class="portfolio-hover">
                                 <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                            <img class="img-fluid img-falla" src="assets/img/fallas/LlevadoAotroservicio-celular.png" alt="..." />
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Se reparó, pero sigue funcionando mal</div>
@@ -315,31 +316,34 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <!-- Name input-->
-                            <input class="form-control" id="name" type="text" placeholder="Nombre *" name="name" required />
+                            <input class="form-control" id="name" type="text" placeholder="Nombre *" name="name"
+                                required />
                             <div class="invalid-feedback" id="nameFeedback">El nombre es obligatorio</div>
                         </div>
                         <div class="form-group">
                             <!-- Email address input-->
-                            <input class="form-control" id="email" type="email" placeholder="Email *"
-                                name="email" required />
+                            <input class="form-control" id="email" type="email" placeholder="Email *" name="email"
+                                required />
                             <div class="invalid-feedback" id="emailFeedback">El email es obligatorio</div>
                         </div>
                         <div class="form-group">
                             <!-- Phone number input-->
-                            <input class="form-control" id="phone" type="tel" placeholder="Telefono celular *" name="phone" required />
+                            <input class="form-control" id="phone" type="tel" placeholder="Telefono celular *"
+                                name="phone" required />
                             <div class="invalid-feedback" id="phoneFeedback">El número celular es obligatorio</div>
                         </div>
                         <div class="form-group mb-md-0">
                             <!-- Subject number input-->
-                            <input class="form-control" id="subject" type="text" placeholder="Asunto *" name="subject" required />
+                            <input class="form-control" id="subject" type="text" placeholder="Asunto *" name="subject"
+                                required />
                             <div class="invalid-feedback" id="subjectFeedback">El asunto es obligatorio</div>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
                             <!-- Message input-->
-                            <textarea class="form-control" id="message" placeholder="Mensaje *"
-                                name="message" required></textarea>
+                            <textarea class="form-control" id="message" placeholder="Mensaje *" name="message"
+                                required></textarea>
                             <div class="invalid-feedback" id="messageFeedback">El mensaje es obligatorio</div>
                         </div>
                     </div>
@@ -356,7 +360,8 @@
                 </div>
                 <!-- Submit Button-->
                 <div class="text-center">
-                    <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit" disabled>Enviar</button>
+                    <button class="btn btn-primary btn-xl text-uppercase" id="submitButton" type="submit"
+                        disabled>Enviar</button>
                 </div>
             </form>
         </div>
@@ -367,8 +372,10 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-lg-start">Copyright &copy; Puslo Smartphone</div>
                 <div class="col-lg-4 my-3 my-lg-0">
-                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/PulsoSmartphone.Cba/"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/pulso_smartphone/"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.facebook.com/PulsoSmartphone.Cba/"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-dark btn-social mx-2" href="https://www.instagram.com/pulso_smartphone/"><i
+                            class="fab fa-instagram"></i></a>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <a class="link-dark text-decoration-none me-3" href="#!">Reportar un error</a>
@@ -391,7 +398,7 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-falla-popup d-block mx-auto" src="assets/img/fallas/celular-fallas-pantalla-manchas.png" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
@@ -431,7 +438,7 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-falla-popup d-block mx-auto" src="assets/img/fallas/bajabateria-celular.png" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
@@ -471,7 +478,7 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <img class="img-falla-popup d-block mx-auto" src="assets/img/fallas/tabradoenlogo-celular.png" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
@@ -511,7 +518,7 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-falla-popup d-block mx-auto" src="assets/img/fallas/malware-celular.png" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
@@ -551,7 +558,7 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-falla-popup d-block mx-auto" id="img-falla-popup-cargalenta" src="assets/img/fallas/cargalenta-celular.png" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
@@ -591,7 +598,7 @@
                                 <!-- Project details-->
                                 <h2 class="text-uppercase">Project Name</h2>
                                 <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-falla-popup d-block mx-auto" src="assets/img/fallas/LlevadoAotroservicio-celular.png" alt="..." />
                                 <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur
                                     adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt
                                     repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae,
