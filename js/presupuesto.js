@@ -52,13 +52,9 @@ screen.on('mousedown', function () {
     cargarNombreParte('Pantalla'); // Llamar a una función para cargar el nombre de la parte en el formulario
 });
 
-/*
-----------------Funciones de carga de partes---------------------
-*/
-
 
 /*
-----------------Funciones de carga de partes---------------------
+----------------Funciones de carga en formulario---------------------
 */
 function cargarNombreParte(nombreParte) {
     const formulario = document.getElementById('formulario');
@@ -66,3 +62,27 @@ function cargarNombreParte(nombreParte) {
 
     nombreParteInput.value = nombreParte;
 }
+
+
+/*
+----------------Otras cosas---------------------
+*/
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Mostrar contenido de la opción 1 y ocultar contenido de la opción 2 al cargar la página
+    document.getElementById('presupuesto-tec').style.display = 'none';
+    document.getElementById('presupuesto-auto').style.display = 'none';
+  
+    // Manejar evento de clic en el botón de Opción 1
+    document.getElementById('botonPresu-Autogenerado').addEventListener('click', function () {
+      document.getElementById('presupuesto-auto').style.display = 'block';
+      document.getElementById('presupuesto-tec').style.display = 'none';
+    });
+  
+    // Manejar evento de clic en el botón de Opción 2
+    document.getElementById('botonPresu-Manual').addEventListener('click', function () {
+      document.getElementById('presupuesto-auto').style.display = 'none';
+      document.getElementById('presupuesto-tec').style.display = 'block';
+    });
+  });
+  

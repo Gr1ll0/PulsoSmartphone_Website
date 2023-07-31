@@ -2,14 +2,76 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pulso Smartphone</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="author" content="Alex Abrahamian" />
+  <title>Puslo Smartphone</title>
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+  <!-- Puslo Smartphone -->
+  <script src="https://kit.fontawesome.com/97a6d63383.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
   <link rel="stylesheet" href="css/style-presupuesto.css">
+  <!--Scripts-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <!--fabric-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#page-top"><img src="assets/img/logo.png" alt="..." /></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars ms-1"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Presupuesto-->
+  <section class="page-section" id="presupuesto">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Presupuesto Gratuito</h2>
+        <h3 class="section-subheading text-muted">Aqui podra generar un presupuesto de la reparación que necesita su
+          equipo</h3>
+
+        <h4 class="my-3">Aclaraciones</h4>
+        <p class="text-muted">Esto es un presupuesto autogenerado por el usuario,
+          el precio final de la reparación puede variar debido a:</p>
+
+        <ul>
+          <li>Subida de precios en los repuestos</li>
+          <li>Subida del dolar</li>
+          <li>Deben repararce más cosas, de las que se informo en el presupuesto</li>
+          <li>Deben repararce otras cosas, de las que se informo en el presupuesto</li>
+        </ul>
+
+        <p class="text-muted">Este presupuesto tiene como objetivo darle un precio estimado al cliente,
+          y facilitar la comunicación entre el cliente y el técnico. Si usted desconoce que daño o fallas tiene su
+          equipo,
+          puede ir a nuestra sección informativa de fallas, o comunicarce directamente con el técnico quien
+          realizara su presupuesto el cual también es gratuito</p>
+
+          <a href="">Sección de fallas</a>
+          <br>
+          <a href="">Comunicación directa con el Técnico</a>
+      </div>
+
+    </div>
+  </section>
 
   <canvas id="canvas" width="191" height="400"></canvas>
 
@@ -19,6 +81,29 @@
   </form>
 
   <a href="index.html">Volver</a>
+  
+  <section class="page-section bg-light" id="opciones">
+    <div class="container" id="FormaDePresupuesto">
+      <div class="col-med-2">
+
+      </div>
+      <div class="Presu-Boton col-med-5">
+        <button class="botonOpcion" id="botonPresu-Autogenerado">Presupuesto Autogenerado</button>
+      </div>
+      <div class="Presu-Boton col-med-5">
+        <button class="botonOpcion" id="botonPresu-Manual">Presupuesto por el Técnico</button>
+      </div>
+      <div class="col-med-2">
+
+      </div>
+    </div>
+  </section>
+  <section class="page-section" id="presupuesto-tec">
+    holis
+  </section>
+  <section class="page-section" id="presupuesto-auto">
+    holis auto
+  </section>
 
 </body>
 

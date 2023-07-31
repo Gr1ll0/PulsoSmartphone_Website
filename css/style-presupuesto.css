@@ -1,44 +1,90 @@
-.smartphone {
-    position: relative;
-    width: 220px;
-    height: 520px;
-  }
-  
-  #imagen-celular {
-    width: 100%;
-    height: auto;
-  }
-  
-  .area-resaltada-pantalla {
-    background-color: blue;
-    opacity: 0.5;
-    position: absolute;
-    top: 66px;
-    left: 15px;
-    width: 188px;
-    height: 327px;
-  }
-  
-  
-  
-  #formulario {
-    margin-top: 20px;
-  }
-  
-  .area-SinResaltar-pantalla{
-    cursor: pointer;
-  }
+body {
+  padding-top: 40px;
+}
 
-  canvas {
-    border: 1px solid #ccc;
-  }
-  
-  /* Estilos para ocultar los manipuladores de control */
-  .custom-control-handler {
-    display: none !important;
-  }
-  
-  /* Estilos para ocultar el indicador de rotación */
-  .custom-rotation-icon {
-    display: none !important;
-  }
+ul {
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
+  text-align: center;
+  list-style-type:disc;
+  list-style-position:inside;
+}
+/*
+Opciones
+*/
+#FormaDePresupuesto{
+  padding: 0;
+  height: 25%;
+  width: 65%;
+  border: 1px solid #e0e0e0;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.Presu-Boton{
+  padding: 3%;
+  margin-right: 0;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.botonOpcion {
+  width: 100%;
+  padding: 15px;
+  text-align:center;
+}
+
+
+
+/*
+Fabric 
+*/
+
+.smartphone {
+  position: relative;
+  width: 220px;
+  height: 520px;
+}
+
+#imagen-celular {
+  width: 100%;
+  height: auto;
+}
+
+.area-resaltada-pantalla {
+  background-color: blue;
+  opacity: 0.5;
+  position: absolute;
+  top: 66px;
+  left: 15px;
+  width: 188px;
+  height: 327px;
+}
+
+#formulario {
+  margin-top: 20px;
+}
+
+.area-SinResaltar-pantalla {
+  cursor: pointer;
+}
+
+canvas {
+  border: 1px solid #ccc;
+}
+
+/* Estilos para ocultar los manipuladores de control */
+.custom-control-handler {
+  display: none !important;
+}
+
+/* Estilos para ocultar el indicador de rotación */
+.custom-rotation-icon {
+  display: none !important;
+}
