@@ -40,8 +40,58 @@
     </div>
   </nav>
 
-  <!--Presupuesto-->
-  <section class="page-section" id="presupuesto">
+  <a href="index.html">Volver</a>
+
+  <section class="page-section" id="opciones">
+    <div class="container" id="FormaDePresupuesto">
+      <div class="col-med-2">
+
+      </div>
+      <div class="Presu-Boton col-med-5">
+        <button class="botonOpcion" id="botonPresu-Autogenerado">Presupuesto Autogenerado</button>
+      </div>
+      <div class="Presu-Boton col-med-5">
+        <button class="botonOpcion" id="botonPresu-Manual">Presupuesto por el Técnico</button>
+      </div>
+      <div class="col-med-2">
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Presupuesto para contacto directo con el tecnico-->
+  <section class="page-section bg-light" id="presupuesto-tec">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section-heading text-uppercase">Presupuesto Gratuito Técnico</h2>
+        <h3 class="section-subheading text-muted">Aqui podra ponerse en contacto con el técnico directamente para que él
+          le proporcione un presupuesto</h3>
+
+        <h4 class="my-3">Aclaraciones</h4>
+        <p class="text-muted">Podra comunicarce con el técnico de forma directa atravez de whatsapp,
+          se aconseja saber el modelo del equipo que tiene la falla, conocer la falla o el daño del equipo,
+          si desconoce la falla pude explicarle al técnico que sucedio con el equipo previamente antes de la falla.
+
+          En algunos casos el técnico no podra determinar la falla, aunque usted proporcione toda la información,
+          por lo que se le debera proporcionar el equipo, luego se diagnosticara la falla. Se le informara del daño y
+          se le realizara un presupuesto, para que usted pueda decidir si se debe reparar o no
+        </p>
+        <p class="text-muted">En algunos casos el técnico no podra determinar la falla, aunque usted proporcione toda la
+          información,
+          por lo que se le debera proporcionar el equipo al técnico y luego se diagnosticara la falla, se le informara
+          del daño y
+          se le realizara un presupuesto, para que usted pueda decidir si se debe reparar o no
+        </p>
+        <br>
+        <a class="btn btn-primary btn-xl text-uppercase" href="http://wa.link/zetw4m">Comunicación directa con el
+          Técnico</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Presupuesto autogenerado por el usuario-->
+  <section class="page-section bg-light" id="presupuesto-auto">
     <div class="container">
       <div class="text-center">
         <h2 class="section-heading text-uppercase">Presupuesto Gratuito</h2>
@@ -65,44 +115,22 @@
           puede ir a nuestra sección informativa de fallas, o comunicarce directamente con el técnico quien
           realizara su presupuesto el cual también es gratuito</p>
 
-          <a href="">Sección de fallas</a>
-          <br>
-          <a href="">Comunicación directa con el Técnico</a>
+        <a href="index.html#portfolio">Sección de fallas</a>
+        <br>
+        <a href="http://wa.link/zetw4m">Comunicación directa con el Técnico</a>
       </div>
 
     </div>
   </section>
 
-  <canvas id="canvas" width="191" height="400"></canvas>
+  <!-- Canvas  -->
+  <section class="page-section" id="presupuesto-auto-canvas">
+    <canvas id="canvas" width="191" height="400"></canvas>
 
-  <form id="formulario">
-    <label for="nombreParte">Nombre de la parte:</label>
-    <input type="text" id="nombreParte" readonly>
-  </form>
-
-  <a href="index.html">Volver</a>
-  
-  <section class="page-section bg-light" id="opciones">
-    <div class="container" id="FormaDePresupuesto">
-      <div class="col-med-2">
-
-      </div>
-      <div class="Presu-Boton col-med-5">
-        <button class="botonOpcion" id="botonPresu-Autogenerado">Presupuesto Autogenerado</button>
-      </div>
-      <div class="Presu-Boton col-med-5">
-        <button class="botonOpcion" id="botonPresu-Manual">Presupuesto por el Técnico</button>
-      </div>
-      <div class="col-med-2">
-
-      </div>
-    </div>
-  </section>
-  <section class="page-section" id="presupuesto-tec">
-    holis
-  </section>
-  <section class="page-section" id="presupuesto-auto">
-    holis auto
+    <form id="formulario">
+      <label for="nombreParte">Nombre de la parte:</label>
+      <input type="text" id="nombreParte" readonly>
+    </form>
   </section>
 
 </body>

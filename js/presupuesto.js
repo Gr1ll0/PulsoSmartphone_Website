@@ -3,7 +3,7 @@ const canvas = new fabric.Canvas('canvas', {
 });
 
 // Cargar una imagen celular png
-fabric.Image.fromURL('assets/img/celular.png', function (img) {
+fabric.Image.fromURL('assets/img/presupuesto-img/celular-presupuesto-auto.png', function (img) {
     // Ajustar el tamaño de la imagen si es necesario
     img.scaleToWidth(200);
     img.scaleToHeight(400);
@@ -22,7 +22,7 @@ fabric.Image.fromURL('assets/img/celular.png', function (img) {
 const screen = new fabric.Rect({
     left: 13,
     top: 56,
-    width: 164,
+    width: 158,
     height: 286,
     fill: 'gray',
     selectable: true, // Habilitar la selección del objeto
@@ -52,6 +52,80 @@ screen.on('mousedown', function () {
     cargarNombreParte('Pantalla'); // Llamar a una función para cargar el nombre de la parte en el formulario
 });
 
+/*
+----------------Boton Home---------------------
+*/
+
+const btnHome = new fabric.Circle({
+    left: 75,
+    top: 352.2,
+    radius: 16.7,
+    fill: 'pink',
+    selectable: true,
+    evented: true,
+    hoverCursor: 'pointer',
+    lockMovementX: true,
+    lockMovementY: true,
+    lockRotation: true,
+    lockScalingX: true,
+    lockScalingY: true,
+    hasControls: false,
+    hasBorders: false,
+    hasRotatingPoint: false
+});
+
+
+// Agregar la forma al lienzo
+canvas.add(btnHome);
+
+// Manejar el evento de clic en la pantalla
+btnHome.on('mousedown', function () {
+    // Cambiar la opacidad del color azul al hacer clic
+    const blueColor = new fabric.Color('blue');
+    const colorWithOpacity = blueColor.setAlpha(0.75); // Opacidad
+
+    this.set('fill', colorWithOpacity.toRgba()); // Aplicar el nuevo color con opacidad
+    canvas.requestRenderAll();
+    cargarNombreParte('Botón Home'); // Llamar a una función para cargar el nombre de la parte en el formulario
+});
+
+
+/*
+----------------Boton Power---------------------
+*/
+
+const btnPower = new fabric.Rect({
+    left: 183,
+    top: 65.9,
+    width: 5,
+    height: 27,
+    fill: 'green',
+    selectable: true,
+    evented: true,
+    hoverCursor: 'pointer',
+    lockMovementX: true,
+    lockMovementY: true,
+    lockRotation: true,
+    lockScalingX: true,
+    lockScalingY: true,
+    hasControls: false,
+    hasBorders: false,
+    hasRotatingPoint: false
+});
+
+// Agregar la forma al lienzo
+canvas.add(btnPower);
+
+// Manejar el evento de clic en la pantalla
+btnPower.on('mousedown', function () {
+    // Cambiar la opacidad del color azul al hacer clic
+    const blueColor = new fabric.Color('blue');
+    const colorWithOpacity = blueColor.setAlpha(0.75); // Opacidad
+
+    this.set('fill', colorWithOpacity.toRgba()); // Aplicar el nuevo color con opacidad
+    canvas.requestRenderAll();
+    cargarNombreParte('Botón Power'); // Llamar a una función para cargar el nombre de la parte en el formulario
+});
 
 /*
 ----------------Funciones de carga en formulario---------------------
@@ -65,24 +139,23 @@ function cargarNombreParte(nombreParte) {
 
 
 /*
-----------------Otras cosas---------------------
+----------------Presupuesto Manual-&-Auto ---------------------
 */
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Mostrar contenido de la opción 1 y ocultar contenido de la opción 2 al cargar la página
     document.getElementById('presupuesto-tec').style.display = 'none';
     document.getElementById('presupuesto-auto').style.display = 'none';
-  
-    // Manejar evento de clic en el botón de Opción 1
+    document.getElementById('presupuesto-auto-canvas').style.display = 'none';
+
     document.getElementById('botonPresu-Autogenerado').addEventListener('click', function () {
-      document.getElementById('presupuesto-auto').style.display = 'block';
-      document.getElementById('presupuesto-tec').style.display = 'none';
+        document.getElementById('presupuesto-auto').style.display = 'block';
+        document.getElementById('presupuesto-tec').style.display = 'none';
+        document.getElementById('presupuesto-auto-canvas').style.display = 'block';
     });
-  
-    // Manejar evento de clic en el botón de Opción 2
+
     document.getElementById('botonPresu-Manual').addEventListener('click', function () {
-      document.getElementById('presupuesto-auto').style.display = 'none';
-      document.getElementById('presupuesto-tec').style.display = 'block';
+        document.getElementById('presupuesto-auto').style.display = 'none';
+        document.getElementById('presupuesto-tec').style.display = 'block';
+        document.getElementById('presupuesto-auto-canvas').style.display = 'none';
     });
-  });
-  
+});
