@@ -33,6 +33,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Página Principal</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Fallas</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#local">Local</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i></a>
           </li>
         </ul>
@@ -40,7 +44,8 @@
     </div>
   </nav>
 
-  <a href="index.html">Volver</a>
+  <br>
+  <br>
 
   <section class="page-section" id="opciones">
     <div class="container" id="FormaDePresupuesto">
@@ -48,10 +53,12 @@
 
       </div>
       <div class="Presu-Boton col-med-5">
-        <button class="botonOpcion" id="botonPresu-Autogenerado">Presupuesto Autogenerado</button>
+        <button class="botonOpcion btn btn-primary btn-xl text-uppercase" id="botonPresu-Autogenerado">Presupuesto
+          Autogenerado</button>
       </div>
       <div class="Presu-Boton col-med-5">
-        <button class="botonOpcion" id="botonPresu-Manual">Presupuesto por el Técnico</button>
+        <button class="botonOpcion btn btn-primary btn-xl text-uppercase" id="botonPresu-Manual">Presupuesto por el
+          Técnico</button>
       </div>
       <div class="col-med-2">
 
@@ -123,16 +130,48 @@
     </div>
   </section>
 
-  <!-- Canvas  -->
+  <!-- Autogenerado Fabric  -->
   <section class="page-section" id="presupuesto-auto-canvas">
+    <!-- Canvas  -->
     <canvas id="canvas" width="191" height="400"></canvas>
 
-    <form id="formulario">
-      <label for="nombreParte">Nombre de la parte:</label>
-      <input type="text" id="nombreParte" readonly>
-    </form>
-  </section>
+    <!-- Formulario de Daños  -->
+    <div class="container formulario-container">
+      <h1 class="text-center mb-4">Reporte de Daños</h1>
 
+      <form id="formularioDaños">
+        <div class="mb-3">
+          <label for="modelo" class="form-label">Modelo del Equipo:</label>
+          <select id="modelo" name="modelo" class="form-select">
+            <option value="modelo1">Modelo 1</option>
+            <option value="modelo2">Modelo 2</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+
+        <div id="otroModeloDiv" style="display: none;">
+          <div class="mb-3">
+            <label for="otroModelo" class="form-label">Ingrese otro modelo:</label>
+            <input type="text" id="otroModelo" name="otroModelo" class="form-control">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="lst_danios" class="form-label">Partes dañadas:</label>
+          <input type="text" id="lst_danios" name="lst_danios" class="form-control" readonly>
+        </div>
+
+        <div class="mb-3">
+          <label for="detalles" class="form-label">Detalles de lo daños / Observaciones:</label>
+          <textarea id="detalles" name="detalles" class="form-control" rows="4"></textarea>
+        </div>
+
+        <div class="d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary">Enviar Reporte</button>
+        </div>
+      </form>
+    </div>
+  </section>
 </body>
 
 <script src="js/presupuesto.js"></script>
