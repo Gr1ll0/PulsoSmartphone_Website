@@ -11402,11 +11402,11 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.12rem; /*Tamaño de fuente*/
-  color: black;
+  color: white;
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: white;
+  color: lightgray;
 }
 
 @media (min-width: 992px) {
@@ -11462,6 +11462,11 @@ header.masthead .masthead-subheading {
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 header.masthead .masthead-heading {
+  padding: 1.8rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: rgba(255, 255, 255, 0.73);
+  border-radius: 25px;
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 3.25rem;
@@ -11481,6 +11486,10 @@ header.masthead .masthead-heading {
     margin-bottom: 2rem;
   }
   header.masthead .masthead-heading {
+    padding: 1.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: rgba(255, 255, 255, 0.73);
     font-size: 4.5rem;
     font-weight: 700;
     line-height: 4.5rem;

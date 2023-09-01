@@ -401,8 +401,8 @@ function actualizarInputListaDanios() {
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("presupuesto-tec").style.display = "none";
-  document.getElementById("presupuesto-auto").style.display = "none";
-  document.getElementById("presupuesto-auto-canvas").style.display = "none";
+  document.getElementById("presupuesto-auto").style.display = "block";
+  document.getElementById("presupuesto-auto-canvas").style.display = "block";
 
   document
     .getElementById("botonPresu-Autogenerado")
